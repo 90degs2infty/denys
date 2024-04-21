@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: (C) 2024 90degs2infty
+# SPDX-FileContributor: 90degs2infty <90degs2infty@posteo.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: MIT
+
+[package]
+name = "denys-lib"
+description = "Library to roll off convex polygons inside one another"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/90degs2infty/denys"
+readme = "README.md"
+keywords = [ "polygon", "2D", "graphics", "rendering" ]
+categories = [ "algorithms", "graphics", "multimedia", "rendering" ]
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[lints]
+workspace = true
