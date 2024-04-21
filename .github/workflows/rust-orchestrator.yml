@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: (C) 2024 90degs2infty
+# SPDX-FileContributor: 90degs2infty <90degs2infty@posteo.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: MIT
+
+# as seen here: https://stackoverflow.com/a/75337311
+
+name: Rust orchestrator
+
+on: [push, pull_request]
+
+jobs:
+  target-matrix:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - target: x86_64-unknown-linux-gnu
+            channel: stable
+    uses: ./.github/workflows/rust.yml
+    with:
+      target: ${{ matrix.target }}
+      channel: ${{ matrix.channel }}
+    secrets: inherit
